@@ -1,4 +1,4 @@
-package zad1;
+package classobjects.zad1.logic;
 
 import java.util.Objects;
 

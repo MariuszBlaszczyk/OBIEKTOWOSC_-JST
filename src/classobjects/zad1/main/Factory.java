@@ -1,4 +1,6 @@
-package zad1;
+package classobjects.zad1.main;
+
+import classobjects.zad1.logic.Employee;
 
 public class Factory {
 
