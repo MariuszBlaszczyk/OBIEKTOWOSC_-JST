@@ -17,6 +17,22 @@ public class Plant {
         this.dailyWaterConsumption = dailyWaterConsumption;
     }
 
+    public double getDailyWaterConsumption() {
+        return dailyWaterConsumption;
+    }
+
+    public double dailyWaterConsumptionOfAllPlants() {
+
+    }
+
+    public double weeklyWaterConsumptionOfAllPlants() {
+        return dailyWaterConsumptionOfAllPlants() * 7;
+    }
+
+    public double yearlyWaterConsumptionOfAllPlants() {
+        return dailyWaterConsumptionOfAllPlants() * 365;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -37,15 +53,5 @@ public class Plant {
                 ", daily water consumption: " + dailyWaterConsumption + ".";
     }
 
-    public double dailyWaterConsumptionOfAllPlants() {
 
-    }
-
-    public double weeklyWaterConsumptionOfAllPlants() {
-        return dailyWaterConsumptionOfAllPlants() * 7;
-    }
-
-    public double yearlyWaterConsumptionOfAllPlants() {
-        return dailyWaterConsumptionOfAllPlants() * 365;
-    }
 }
