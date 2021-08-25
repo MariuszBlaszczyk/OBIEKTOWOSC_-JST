@@ -7,25 +7,24 @@ public class Employee {
     private String name;
     private String lastName;
     private int birthYear;
-    private int seniority;
+    Seniority seniority;
 
     public Employee() {
     }
 
-    public Employee(String name, String lastName, int birthYear, int seniority) {
+    public Employee(String name, String lastName, int birthYear, Seniority seniority) {
         this.name = name;
         this.lastName = lastName;
         this.birthYear = birthYear;
         this.seniority = seniority;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return birthYear == employee.birthYear && seniority == employee.seniority && Objects.equals(name, employee.name) && Objects.equals(lastName, employee.lastName);
+        return birthYear == employee.birthYear && Objects.equals(name, employee.name) && Objects.equals(lastName, employee.lastName) && seniority == employee.seniority;
     }
 
     @Override
@@ -35,9 +34,8 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee: " +
-                "Name: " + name + " " + lastName +
-                ", birth year: " + birthYear +
-                ", seniority " + seniority + ".";
+        return "name: " + name + " " + lastName +
+                ", " + "birth year: " + birthYear +
+                ", " + "seniority: " + seniority.name() + ".";
     }
 }
