@@ -1,6 +1,5 @@
 package classobjects.zad1.model;
 
-import java.math.BigDecimal;
 
 public enum Seniority {
 

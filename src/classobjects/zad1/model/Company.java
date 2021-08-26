@@ -7,14 +7,13 @@ public class Company {
 
     List<Employee> employeesList = new ArrayList<>();
 
-    public Company addEmployee(Employee employee) {
+    public void addEmployee(Employee employee) {
         employeesList.add(employee);
-        return this;
     }
 
-    public Company removeEmployee(Employee employee) {
+    public boolean removeEmployee(Employee employee) {
         employeesList.remove(employee);
-        return this;
+        return true;
     }
 
     public void showEmployeesList() {
