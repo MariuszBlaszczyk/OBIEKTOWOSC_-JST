@@ -1,0 +1,7 @@
+Poniższy diagram przedstawia obiekty oraz relacje między nimi.
+Jest to wycinek systemu związanego z serwisem aukcyjnym (znajdują się więc tutaj takie elementy jak aukcje,
+które mogą być wystawiane przez użytkowników).
+
+Na podstawie diagramu utwórz odpowiednie klasy, a następnie obiekty odpowiadające sytuacji z diagramu.
+Wyświetl w konsoli kompletne informacje o aukcjach oraz użytkownikach, którzy je wystawili,
+ale z pominięciem informacji o ich adresach.
