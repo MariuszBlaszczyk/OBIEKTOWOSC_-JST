@@ -1,16 +1,17 @@
 package aggregationaccomposition.zad1.model;
 
+import java.math.BigDecimal;
 import java.util.Objects;
 
 public class Credit {
 
     private Person borrower;
-    private double cashBorrowed;
-    private double cashReturned;
-    private double interestRate;
+    private BigDecimal cashBorrowed;
+    private BigDecimal cashReturned;
+    private BigDecimal interestRate;
     private int termMonths;
 
-    public Credit(Person borrower, double cashBorrowed, double cashReturned, double interestRate, int termMonths) {
+    public Credit(Person borrower, BigDecimal cashBorrowed, BigDecimal cashReturned, BigDecimal interestRate, int termMonths) {
         this.borrower = borrower;
         this.cashBorrowed = cashBorrowed;
         this.cashReturned = cashReturned;
@@ -22,15 +23,15 @@ public class Credit {
         return borrower;
     }
 
-    public double getCashBorrowed() {
+    public BigDecimal getCashBorrowed() {
         return cashBorrowed;
     }
 
-    public double getCashReturned() {
+    public BigDecimal getCashReturned() {
         return cashReturned;
     }
 
-    public double getInterestRate() {
+    public BigDecimal getInterestRate() {
         return interestRate;
     }
 
@@ -38,12 +39,13 @@ public class Credit {
         return termMonths;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Credit credit = (Credit) o;
-        return Double.compare(credit.cashBorrowed, cashBorrowed) == 0 && Double.compare(credit.cashReturned, cashReturned) == 0 && Double.compare(credit.interestRate, interestRate) == 0 && termMonths == credit.termMonths && Objects.equals(borrower, credit.borrower);
+        return termMonths == credit.termMonths && Objects.equals(borrower, credit.borrower) && Objects.equals(cashBorrowed, credit.cashBorrowed) && Objects.equals(cashReturned, credit.cashReturned) && Objects.equals(interestRate, credit.interestRate);
     }
 
     @Override

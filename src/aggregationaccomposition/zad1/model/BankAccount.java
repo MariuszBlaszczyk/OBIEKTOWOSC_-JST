@@ -1,13 +1,14 @@
 package aggregationaccomposition.zad1.model;
 
+import java.math.BigDecimal;
 import java.util.Objects;
 
 public class BankAccount {
 
     private Person owner;
-    private double balance;
+    private BigDecimal balance;
 
-    public BankAccount(Person owner, double balance) {
+    public BankAccount(Person owner, BigDecimal balance) {
         this.owner = owner;
         this.balance = balance;
     }
@@ -16,7 +17,7 @@ public class BankAccount {
         return owner;
     }
 
-    public double getBalance() {
+    public BigDecimal getBalance() {
         return balance;
     }
 
@@ -25,7 +26,7 @@ public class BankAccount {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         BankAccount that = (BankAccount) o;
-        return Double.compare(that.balance, balance) == 0 && Objects.equals(owner, that.owner);
+        return Objects.equals(owner, that.owner) && Objects.equals(balance, that.balance);
     }
 
     @Override

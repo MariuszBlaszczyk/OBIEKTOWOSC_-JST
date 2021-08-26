@@ -38,6 +38,7 @@ public class Person {
         return residenceAddress;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
