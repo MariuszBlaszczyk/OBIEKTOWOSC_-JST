@@ -4,15 +4,17 @@ import java.math.BigDecimal;
 
 public enum Seniority {
 
-    JUNIOR(new BigDecimal("5000")), MID(new BigDecimal("10000")), SENIOR(new BigDecimal("15000"));
+    JUNIOR(" and its payment is 5000 PLN"),
+    MID(" and its payment is 10000 PLN"),
+    SENIOR(" and its payment is 15000 PLN");
 
-    private final BigDecimal salaryLevel;
+    private final String salaryLevel;
 
-    Seniority(BigDecimal salaryLevel) {
+    Seniority(String salaryLevel) {
         this.salaryLevel = salaryLevel;
     }
 
-    public BigDecimal getSalaryLevel() {
+    public String getSalaryLevel() {
         return salaryLevel;
     }
 }
