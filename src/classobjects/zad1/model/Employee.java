@@ -50,6 +50,7 @@ public class Employee {
     public String toString() {
         return "name: " + name + " " + lastName +
                 ", " + "birth year: " + birthYear +
-                ", " + "seniority: " + seniority.name() + ".";
+                ", " + "seniority: " + seniority.name() +
+                " " + seniority.getSalaryLevel() + ".";
     }
 }
