@@ -1,4 +1,4 @@
-package classobjects.zad1.logic;
+package classobjects.zad1.model;
 
 import java.util.Objects;
 
@@ -7,16 +7,30 @@ public class Employee {
     private String name;
     private String lastName;
     private int birthYear;
-    Seniority seniority;
+    private Seniority seniority;
 
-    public Employee() {
-    }
 
     public Employee(String name, String lastName, int birthYear, Seniority seniority) {
         this.name = name;
         this.lastName = lastName;
         this.birthYear = birthYear;
         this.seniority = seniority;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public int getBirthYear() {
+        return birthYear;
+    }
+
+    public Seniority getSeniority() {
+        return seniority;
     }
 
     @Override
