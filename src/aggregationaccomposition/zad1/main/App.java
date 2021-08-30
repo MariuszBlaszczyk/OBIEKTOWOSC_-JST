@@ -14,7 +14,7 @@ public class App {
 
 
         Person person1 = new Person("Jan", "Kowalski", "90897812362");
-        Address registeredAddressPerson1 = new Address("Warszawa", "Wiejska", "7c", "-",
+        Address registeredAddressPerson1 = new Address("Warszawa", "Wiejska", "7c",
                 "22-200");
         Address residenceAddressPerson1 = registeredAddressPerson1;
         BankAccount accountPerson1 = new BankAccount(new BigDecimal("10000"));
@@ -23,7 +23,7 @@ public class App {
         Client client1 = new Client(person1, registeredAddressPerson1, accountPerson1, creditPerson1);
         clients.add(client1);
 
-        
+
         Person person2 = new Person("Marek", "Nowak", "89033019403");
         Address registeredAddressPerson2 = new Address("Poznań", "Wielka", "13", "2",
                 "33-300");

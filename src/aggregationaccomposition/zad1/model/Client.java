@@ -22,6 +22,19 @@ public class Client {
         this.residenceAddress = residenceAddress;
     }
 
+    public Client(Person client, Address registeredAddress, Address residenceAddress, BankAccount bankAccount) {
+        this.client = client;
+        this.registeredAddress = registeredAddress;
+        this.residenceAddress = residenceAddress;
+        this.bankAccount = bankAccount;
+    }
+
+    public Client(Person client, Address registeredAddress, BankAccount bankAccount) {
+        this.client = client;
+        this.registeredAddress = registeredAddress;
+        this.bankAccount = bankAccount;
+    }
+
     public Person getClient() {
         return client;
     }
