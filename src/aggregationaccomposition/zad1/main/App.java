@@ -20,7 +20,7 @@ public class App {
         BankAccount accountPerson1 = new BankAccount(new BigDecimal("10000"));
         Credit creditPerson1 = new Credit(new BigDecimal("2000"), new BigDecimal("100"),
                 new BigDecimal("0.05"), 12);
-        Client client1 = new Client(person1, registeredAddressPerson1, accountPerson1, creditPerson1);
+        Client client1 = new Client(person1, registeredAddressPerson1, residenceAddressPerson1, accountPerson1, creditPerson1);
         clients.add(client1);
 
 
@@ -31,7 +31,7 @@ public class App {
         BankAccount accountPerson2 = new BankAccount(new BigDecimal("7500"));
         Credit creditPerson2 = new Credit(new BigDecimal("4500"), new BigDecimal("250"),
                 new BigDecimal("0.08"), 24);
-        Client client2 = new Client(person1, registeredAddressPerson2, residenceAddressPerson2, accountPerson2, creditPerson2);
+        Client client2 = new Client(person2, registeredAddressPerson2, residenceAddressPerson2, accountPerson2, creditPerson2);
         clients.add(client2);
 
 
