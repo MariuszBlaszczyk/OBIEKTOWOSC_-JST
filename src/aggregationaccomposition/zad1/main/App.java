@@ -38,8 +38,8 @@ public class App {
         for (int i = 0; i < clients.size(); i++) {
             System.out.println("Name: " + clients.get(i).getClient().getFirstName() + " " +
                     clients.get(i).getClient().getLastName() +
-                    " ,city: " + clients.get(i).getResidenceAddress().getCity() +
-                    " ,balance: " + clients.get(i).getBankAccount().getBalance() + "\n");
+                    ", city: " + clients.get(i).getResidenceAddress().getCity() +
+                    ", balance: " + clients.get(i).getBankAccount().getBalance() + ".\n");
         }
     }
 }
