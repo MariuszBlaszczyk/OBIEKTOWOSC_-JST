@@ -1,9 +1,6 @@
 package aggregationaccomposition.zad1.main;
 
-import aggregationaccomposition.zad1.model.Address;
-import aggregationaccomposition.zad1.model.BankAccount;
-import aggregationaccomposition.zad1.model.Credit;
-import aggregationaccomposition.zad1.model.Person;
+import aggregationaccomposition.zad1.model.*;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -13,33 +10,36 @@ public class App {
 
     public static void main(String[] args) {
 
-        List<Person> persons = new ArrayList<>();
+        List<Client> clients = new ArrayList<>();
 
+
+        Person person1 = new Person("Jan", "Kowalski", "90897812362");
         Address registeredAddressPerson1 = new Address("Warszawa", "Wiejska", "7c", "-",
                 "22-200");
         Address residenceAddressPerson1 = registeredAddressPerson1;
-        Person person1 = new Person("Jan", "Kowalski", "90897812362",
-                registeredAddressPerson1, residenceAddressPerson1);
-        BankAccount accountPerson1 = new BankAccount(person1, new BigDecimal("10000"));
-        Credit creditPerson1 = new Credit(person1, new BigDecimal("2000"), new BigDecimal("100"),
+        BankAccount accountPerson1 = new BankAccount(new BigDecimal("10000"));
+        Credit creditPerson1 = new Credit(new BigDecimal("2000"), new BigDecimal("100"),
                 new BigDecimal("0.05"), 12);
-        persons.add(person1);
+        Client client1 = new Client(person1, registeredAddressPerson1, accountPerson1, creditPerson1);
+        clients.add(client1);
 
-
+        
+        Person person2 = new Person("Marek", "Nowak", "89033019403");
         Address registeredAddressPerson2 = new Address("Poznań", "Wielka", "13", "2",
                 "33-300");
         Address residenceAddressPerson2 = residenceAddressPerson1;
-        Person person2 = new Person("Marek", "Nowak", "89033019403",
-                registeredAddressPerson2, residenceAddressPerson2);
-        BankAccount accountPerson2 = new BankAccount(person2, new BigDecimal("7500"));
-        Credit creditPerson2 = new Credit(person2, new BigDecimal("4500"), new BigDecimal("250"),
+        BankAccount accountPerson2 = new BankAccount(new BigDecimal("7500"));
+        Credit creditPerson2 = new Credit(new BigDecimal("4500"), new BigDecimal("250"),
                 new BigDecimal("0.08"), 24);
-        persons.add(person2);
+        Client client2 = new Client(person1, registeredAddressPerson2, residenceAddressPerson2, accountPerson2, creditPerson2);
+        clients.add(client2);
 
 
-        for (int i = 0; i < persons.size(); i++) {
-            System.out.println("Name: " + persons.get(i).getFirstName() + " " +
-                    persons.get(i).getLastName() + ", city: " + persons.get(i).getResidenceAddress().getCity() + "\n");
+        for (int i = 0; i < clients.size(); i++) {
+            System.out.println("Name: " + clients.get(i).getClient().getFirstName() + " " +
+                    clients.get(i).getClient().getLastName() +
+                    " ,city: " + clients.get(i).getResidenceAddress().getCity() +
+                    " ,balance: " + clients.get(i).getBankAccount().getBalance() + "\n");
         }
     }
 }

@@ -5,16 +5,10 @@ import java.util.Objects;
 
 public class BankAccount {
 
-    private Person owner;
     private BigDecimal balance;
 
-    public BankAccount(Person owner, BigDecimal balance) {
-        this.owner = owner;
+    public BankAccount(BigDecimal balance) {
         this.balance = balance;
-    }
-
-    public Person getOwner() {
-        return owner;
     }
 
     public BigDecimal getBalance() {
@@ -26,19 +20,18 @@ public class BankAccount {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         BankAccount that = (BankAccount) o;
-        return Objects.equals(owner, that.owner) && Objects.equals(balance, that.balance);
+        return Objects.equals(balance, that.balance);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(owner, balance);
+        return Objects.hash(balance);
     }
 
     @Override
     public String toString() {
         return "BankAccount{" +
-                "owner=" + owner +
-                ", balance=" + balance +
+                "balance=" + balance +
                 '}';
     }
 }
