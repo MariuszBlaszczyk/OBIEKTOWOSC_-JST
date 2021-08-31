@@ -14,7 +14,7 @@ public class App {
 
 
         Person person1 = new Person("Jan", "Kowalski", "90897812362");
-        Address registeredAddressPerson1 = new Address("Warszawa", "Wiejska", "7c",
+        Address registeredAddressPerson1 = new Address("Warszawa", "Wiejska", "7c", "-",
                 "22-200");
         Address residenceAddressPerson1 = registeredAddressPerson1;
         BankAccount accountPerson1 = new BankAccount(new BigDecimal("10000"));

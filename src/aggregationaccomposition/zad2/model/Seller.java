@@ -19,9 +19,6 @@ public class Seller {
         return person;
     }
 
-    public Address getAddress() {
-        return address;
-    }
 
     @Override
     public boolean equals(Object o) {

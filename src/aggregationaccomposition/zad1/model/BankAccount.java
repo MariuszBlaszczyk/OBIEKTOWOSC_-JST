@@ -7,13 +7,16 @@ public class BankAccount {
 
     private BigDecimal balance;
 
+
     public BankAccount(BigDecimal balance) {
         this.balance = balance;
     }
 
+
     public BigDecimal getBalance() {
         return balance;
     }
+
 
     @Override
     public boolean equals(Object o) {

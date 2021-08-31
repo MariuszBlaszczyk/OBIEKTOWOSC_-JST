@@ -15,6 +15,7 @@ public class Person {
         this.pesel = pesel;
     }
 
+
     public String getFirstName() {
         return firstName;
     }
@@ -23,9 +24,6 @@ public class Person {
         return lastName;
     }
 
-    public String getPesel() {
-        return pesel;
-    }
 
     @Override
     public boolean equals(Object o) {

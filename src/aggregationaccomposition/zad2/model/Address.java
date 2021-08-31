@@ -18,32 +18,6 @@ public class Address {
         this.postalCode = postalCode;
     }
 
-    public Address(String city, String street, String homeNr, String postalCode) {
-        this.city = city;
-        this.street = street;
-        this.homeNr = homeNr;
-        this.postalCode = postalCode;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public String getStreet() {
-        return street;
-    }
-
-    public String getHomeNr() {
-        return homeNr;
-    }
-
-    public String getFlatNr() {
-        return flatNr;
-    }
-
-    public String getPostalCode() {
-        return postalCode;
-    }
 
     @Override
     public boolean equals(Object o) {

@@ -3,14 +3,14 @@ package aggregationaccomposition.zad2.app;
 import aggregationaccomposition.zad2.model.*;
 
 import java.math.BigDecimal;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        List<Auction> auctions = new LinkedList<>();
+        List<Auction> auctions = new ArrayList<>();
 
         Person person1 = new Person("Jan", "Kowalski");
         Address addressPerson1 = new Address("Wrocław", "Kościuszki", "24A", "21", "50-500");

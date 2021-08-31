@@ -5,33 +5,17 @@ import java.util.Objects;
 
 public class Credit {
 
-
     private BigDecimal cashBorrowed;
     private BigDecimal cashReturned;
     private BigDecimal interestRate;
     private int termMonths;
+
 
     public Credit(BigDecimal cashBorrowed, BigDecimal cashReturned, BigDecimal interestRate, int termMonths) {
         this.cashBorrowed = cashBorrowed;
         this.cashReturned = cashReturned;
         this.interestRate = interestRate;
         this.termMonths = termMonths;
-    }
-
-    public BigDecimal getCashBorrowed() {
-        return cashBorrowed;
-    }
-
-    public BigDecimal getCashReturned() {
-        return cashReturned;
-    }
-
-    public BigDecimal getInterestRate() {
-        return interestRate;
-    }
-
-    public int getTermMonths() {
-        return termMonths;
     }
 
 

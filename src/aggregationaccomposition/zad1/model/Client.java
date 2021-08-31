@@ -10,37 +10,18 @@ public class Client {
     private BankAccount bankAccount;
     private Credit credit;
 
-    public Client(Person client, Address registeredAddress, BankAccount bankAccount, Credit credit) {
+
+    public Client(Person client, Address registeredAddress, Address residenceAddress, BankAccount bankAccount, Credit credit) {
         this.client = client;
         this.registeredAddress = registeredAddress;
+        this.residenceAddress = residenceAddress;
         this.bankAccount = bankAccount;
         this.credit = credit;
     }
 
-    public Client(Person client, Address registeredAddress, Address residenceAddress, BankAccount bankAccount, Credit credit) {
-        this(client, registeredAddress, bankAccount, credit);
-        this.residenceAddress = residenceAddress;
-    }
-
-    public Client(Person client, Address registeredAddress, Address residenceAddress, BankAccount bankAccount) {
-        this.client = client;
-        this.registeredAddress = registeredAddress;
-        this.residenceAddress = residenceAddress;
-        this.bankAccount = bankAccount;
-    }
-
-    public Client(Person client, Address registeredAddress, BankAccount bankAccount) {
-        this.client = client;
-        this.registeredAddress = registeredAddress;
-        this.bankAccount = bankAccount;
-    }
 
     public Person getClient() {
         return client;
-    }
-
-    public Address getRegisteredAddress() {
-        return registeredAddress;
     }
 
     public Address getResidenceAddress() {
@@ -51,9 +32,6 @@ public class Client {
         return bankAccount;
     }
 
-    public Credit getCredit() {
-        return credit;
-    }
 
     @Override
     public boolean equals(Object o) {
