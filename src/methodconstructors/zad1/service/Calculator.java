@@ -1,4 +1,4 @@
-package methodconstructors.zad1.logic;
+package methodconstructors.zad1.service;
 
 public class Calculator {
 

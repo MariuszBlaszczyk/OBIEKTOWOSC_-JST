@@ -1,6 +1,6 @@
 package methodconstructors.zad1.main;
 
-import methodconstructors.zad1.logic.Calculator;
+import methodconstructors.zad1.service.Calculator;
 
 public class App {
 
