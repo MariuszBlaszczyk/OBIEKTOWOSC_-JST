@@ -15,17 +15,13 @@ public class Offer {
         this.special = special;
     }
 
-    public Product getProduct() {
-        return product;
-    }
+
 
     public BigDecimal getPrice() {
         return price;
     }
 
-    public boolean isSpecial() {
-        return special;
-    }
+
 
     @Override
     public boolean equals(Object o) {

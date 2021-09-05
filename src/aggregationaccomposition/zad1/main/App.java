@@ -35,11 +35,20 @@ public class App {
         clients.add(client2);
 
 
-        for (int i = 0; i < clients.size(); i++) {
-            System.out.println("Name: " + clients.get(i).getClient().getFirstName() + " " +
-                    clients.get(i).getClient().getLastName() +
-                    ", city: " + clients.get(i).getResidenceAddress().getCity() +
-                    ", balance: " + clients.get(i).getBankAccount().getBalance() + ".\n");
+//        for (int i = 0; i < clients.size(); i++) {
+//            System.out.println("Name: " + clients.get(i).getClient().getFirstName() + " " +
+//                    clients.get(i).getClient().getLastName() +
+//                    ", city: " + clients.get(i).getResidenceAddress().getCity() +
+//                    ", balance: " + clients.get(i).getBankAccount().getBalance() + ".\n");
+//        }
+
+        int clientCounter = 1;
+        for (Client client : clients) {
+            System.out.println("Client nr " + clientCounter);
+            client.getClientDetails();
+            clientCounter++;
         }
+
+
     }
 }

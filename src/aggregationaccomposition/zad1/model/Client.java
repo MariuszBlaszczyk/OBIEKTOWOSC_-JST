@@ -19,6 +19,14 @@ public class Client {
         this.credit = credit;
     }
 
+    public Client(Person client, Address address, BankAccount bankAccount, Credit credit) {
+        this.client = client;
+        this.registeredAddress = address;
+        this.residenceAddress = address;
+        this.bankAccount = bankAccount;
+        this.credit = credit;
+    }
+
 
     public Person getClient() {
         return client;
@@ -32,6 +40,13 @@ public class Client {
         return bankAccount;
     }
 
+    public void getClientDetails() {
+        System.out.println("Name: " + getClient().getFirstName() + " " + getClient().getLastName());
+        System.out.println("City: " + getResidenceAddress().getCity());
+        System.out.println("Balance: " + getBankAccount().getBalance() + "\n");
+    }
+
+    ;
 
     @Override
     public boolean equals(Object o) {

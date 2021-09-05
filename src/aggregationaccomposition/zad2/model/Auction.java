@@ -20,6 +20,15 @@ public class Auction {
         return item;
     }
 
+    public void getSellerAndItemDetails() {
+        System.out.println("Seller");
+        System.out.println("Name: " + getSeller().getPerson().getFirstName() + " " + getSeller().getPerson().getLastName());
+        System.out.println("Item");
+        System.out.println("Title: " + getItem().getTitle() + ".");
+        System.out.println("Description: " + getItem().getDescription() + ".");
+        System.out.println("Price " + getItem().getPrice() + " zł." + "\n");
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -27,14 +27,13 @@ public class Main {
         Auction auction2 = new Auction(seller2, item2);
         auctions.add(auction2);
 
-        for (int i = 0; i < auctions.size(); i++) {
-            System.out.println("Auction nr " + (i + 1) +
-                    ": title - " + auctions.get(i).getItem().getTitle() +
-                    ", description - " + auctions.get(i).getItem().getDescription() +
-                    ", price - " + auctions.get(i).getItem().getPrice() + ".");
-            System.out.println("Seller: " + auctions.get(i).getSeller().getPerson().getFirstName() +
-                    " " + auctions.get(i).getSeller().getPerson().getLastName());
-
+        int auctionsCounter = 1;
+        for (Auction auction : auctions) {
+            System.out.println("Auction nr " + auctionsCounter);
+            auction.getSellerAndItemDetails();
+            auctionsCounter++;
         }
+
+
     }
 }
