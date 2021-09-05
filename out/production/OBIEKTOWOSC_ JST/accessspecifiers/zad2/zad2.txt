@@ -1,0 +1,16 @@
+Poniżej znajduje się klasa, która reprezentuje telefon komórkowy. Ma ona pola pozwalające zapisać nazwę producenta,
+model, pojemność baterii i aktualny poziom naładowania w procentach
+(z założenia wartość od 1 do 100, które odpowiadają wartościom od 1% do 100%).
+
+W drugiej klasie utworzony jest przykładowy obiekt reprezentujący telefon.
+
+Przerób klasę reprezentującą telefon do takiej postaci, aby pola w niej były prywatne,
+a dla każdego z nich stwórz getter oraz setter. Dodatkowo zdefiniuj w tej klasie metodę,
+która zwróci informacje na temat telefonu w postaci Stringa.
+Zwracany napis powinien być zgodny z formatem wyświetlanym w powyższej metodzie main().
+Klasę reprezentującą telefon umieść w pakiecie pl.javastart.model, natomiast klasę z metodą main()
+w pakiecie pl.javastart.application.
+
+Stwórz także nową klasę Charger (ładowarka), a w niej metodę charge,
+która przyjmuje jako parametr telefon i podładowuje go o 1%. Klasa ta powinna znaleźć się w pakiecie pl.javastart.logic.
+Przetestuj działanie nowej metody, podładowując telefon utworzony w metodzie main.
