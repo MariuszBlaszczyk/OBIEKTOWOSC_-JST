@@ -14,6 +14,6 @@ public class App {
         pointController.movePoint(p1);
         System.out.println(p1);
 
-        
+
     }
 }
