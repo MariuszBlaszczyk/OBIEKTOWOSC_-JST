@@ -1,5 +1,6 @@
 package accessspecifiers.zad1.model;
 
+
 import java.util.Objects;
 
 public class Point {

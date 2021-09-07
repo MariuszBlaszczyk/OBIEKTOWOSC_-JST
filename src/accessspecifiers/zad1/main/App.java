@@ -1,28 +1,19 @@
 package accessspecifiers.zad1.main;
 
 import accessspecifiers.zad1.logic.PointController;
+
 import accessspecifiers.zad1.model.Point;
 
 public class App {
 
     public static void main(String[] args) {
 
+        Point p1 = new Point(10, 20);
+        System.out.println(p1);
         PointController pointController = new PointController();
+        pointController.movePoint(p1);
+        System.out.println(p1);
 
-        Point point1 = new Point(10, 20);
-        System.out.println(point1);
-        pointController.addX(point1);
-        System.out.println(point1);
-        pointController.addY(point1);
-        System.out.println(point1);
-
-        Point point2 = new Point(5,9);
-        System.out.println(point2);
-        pointController.subtractX(point2);
-        System.out.println(point2);
-        pointController.subtractY(point2);
-        System.out.println(point2);
-
-
+        
     }
 }
