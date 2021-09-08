@@ -1,6 +1,6 @@
 package overloadingomethodsandthis.zad1.main;
 
-import overloadingomethodsandthis.zad1.logic.Calculator;
+import overloadingomethodsandthis.zad1.service.Calculator;
 
 public class App {
 

@@ -5,6 +5,7 @@ import java.util.Random;
 public class Dice {
 
     private int value;
+    private static Random random = new Random();
 
     public Dice() {
         roll();
@@ -18,7 +19,6 @@ public class Dice {
     }
 
     public void roll() {
-        Random random = new Random();
         value = random.nextInt(6) + 1;
     }
 

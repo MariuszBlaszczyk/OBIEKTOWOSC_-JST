@@ -6,10 +6,6 @@ import java.util.Scanner;
 
 public class PointController {
 
-
-    private Shift shift;
-
-
     public void movePoint(Point point) {
         Shift shift = controller();
         switch (shift) {
@@ -39,22 +35,22 @@ public class PointController {
 
     private void addX(Point point) {
         int right = point.getX();
-        point.setX(right + 1);
+        point.setX(right++);
     }
 
     private void addY(Point point) {
         int up = point.getY();
-        point.setY(up + 1);
+        point.setY(up++);
     }
 
     private void subtractX(Point point) {
         int left = point.getX();
-        point.setX(left - 1);
+        point.setX(left--);
     }
 
     private void subtractY(Point point) {
         int down = point.getY();
-        point.setY(down - 1);
+        point.setY(down--);
     }
 
 }

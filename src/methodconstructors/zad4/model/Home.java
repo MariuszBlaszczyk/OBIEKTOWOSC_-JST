@@ -19,29 +19,51 @@ public class Home {
 
     public void takeShower() {
         System.out.println("Taking a shower");
-        waterAmount -= 48;
+        if (waterAmount < 48) {
+            System.out.println("The remaining amount of water is too low" + waterAmount);
+        } else {
+            waterAmount -= 48;
+        }
     }
 
     public void takeBath() {
         System.out.println("Taking a bath");
-        waterAmount -= 86;
+        if (waterAmount < 86) {
+            System.out.println("The remaining amount of water is too low" + waterAmount);
+        } else {
+            waterAmount -= 86;
+        }
     }
 
     public void makeDinner() {
         System.out.println("Making a dinner");
-        oilAmount -= 0.1;
-        waterAmount -= 4;
+        if (oilAmount < 0.1 && waterAmount < 4) {
+            System.out.println("The remaining amount of water is too low" + waterAmount);
+            System.out.println("The remaining amount of oil is too low" + oilAmount);
+        } else {
+            oilAmount -= 0.1;
+            waterAmount -= 4;
+        }
     }
 
     public void boilWater() {
         System.out.println("Boiling a water");
-        oilAmount -= 0.05;
-        waterAmount -= 0.5;
+        if (oilAmount < 0.05 && waterAmount < 0.5) {
+            System.out.println("The remaining amount of water is too low" + waterAmount);
+            System.out.println("The remaining amount of oil is too low" + oilAmount);
+        } else {
+            oilAmount -= 0.05;
+            waterAmount -= 0.5;
+        }
     }
 
     public void watchTv(int hours) {
         System.out.print("Watching TV by ");
-        if (hours == 1) {
+        if (hours < 1) {
+            System.out.println("Enter the full time");
+        } else if (oilAmount < 0.06) {
+            System.out.println("The remaining amount of oil is too low" + oilAmount);
+        } else if (hours == 1) {
             System.out.println(hours + " hour.");
             oilAmount -= 0.06;
         } else {
@@ -65,8 +87,6 @@ public class Home {
 
     @Override
     public String toString() {
-        return "Home\n" +
-                "- water amount: " + waterAmount + " l\n" +
-                "- oil amount: " + oilAmount + " l.";
+        return "Quantity: water = " + waterAmount + " l, oil = " + oilAmount + " l.";
     }
 }
