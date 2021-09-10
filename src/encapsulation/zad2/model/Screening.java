@@ -24,7 +24,6 @@ public class Screening {
         return maxSeats;
     }
 
-
     public int getFreeSeats() {
         return freeSeats;
     }
@@ -33,7 +32,7 @@ public class Screening {
         return ageRequired;
     }
 
-    String getMovieDetails() {
+    public String getMovieDetails() {
         return movieTitle + " - " + movieType + " " + movieTime + " min.";
     }
 

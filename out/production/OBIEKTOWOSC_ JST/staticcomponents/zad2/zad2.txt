@@ -1,0 +1,13 @@
+W przepisach kulinarnych często podaje się składniki w przeliczeniu na kubki, łyżki, czy łyżeczki.
+Często jest to mało wygodne. Zdefiniuj trzy statyczne metody,
+które pomogą w przeliczaniu tego typu jednostek na mililitry.
+
+Zakładamy, że:
+
+    1 szklanka / kubek to 250ml,
+    1 łyżka (stołowa) to 15ml,
+    1 łyżeczka (do herbaty) to 5ml.
+
+Zakładamy, że w przepisach mogą pojawiać się miary typu 1,5 szklanki, albo 0,5 łyżki.
+
+Przetestuj działanie programu, w1yświetlając kilka różnych przeliczeń.
