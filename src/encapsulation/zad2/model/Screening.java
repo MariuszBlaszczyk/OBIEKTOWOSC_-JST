@@ -45,7 +45,7 @@ public class Screening {
     }
 
     public boolean hasFreeSeats() {
-        return freeSeats == 0;
+        return freeSeats > 0;
     }
 
     public int calculateIdNumber() {

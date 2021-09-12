@@ -18,8 +18,35 @@ public class Car {
         this.engineOn = engineOn;
     }
 
+    public void setEngineOk(boolean engineOk) {
+        if (!isEngineOk) {
+            this.engineOn = false;
+        }
+        isEngineOk = engineOk;
+    }
+
+    public void setFuelLevel(int fuelLevel) {
+        if (fuelLevel <= 0) {
+            this.engineOn = false;
+        }
+        this.fuelLevel = fuelLevel;
+    }
+
     public void setEngineOn(boolean engineOn) {
-        this.engineOn = engineOn;
+        int systemCheck = systemCheck();
+        if (systemCheck == Codes.ERROR_CHECK_ENGINE.getValue() || systemCheck == Codes.ERROR_NO_FUEL.getValue()) {
+            this.engineOn = false;
+        } else {
+            this.engineOn = engineOn;
+        }
+    }
+
+    public void setDoorsOpen(boolean doorsOpen) {
+        this.doorsOpen = doorsOpen;
+    }
+
+    public void setFuelFlapOpen(boolean fuelFlapOpen) {
+        this.fuelFlapOpen = fuelFlapOpen;
     }
 
     public int start() {
@@ -32,7 +59,7 @@ public class Car {
         if (!isEngineOk) {
             return Codes.ERROR_CHECK_ENGINE.getValue();
         }
-        if (fuelLevel == 0) {
+        if (fuelLevel <= 0) {
             return Codes.ERROR_NO_FUEL.getValue();
         }
         if (fuelFlapOpen) {
@@ -42,6 +69,25 @@ public class Car {
             return Codes.WARNING_DOORS_OPEN.getValue();
         }
         return Codes.ALL_OK.getValue();
+    }
+
+    public String status() {
+        if (systemCheck() == Codes.ALL_OK.getValue())
+            return "Wszystkie systemy sprawne, możesz wyruszyć w bezpieczną podróż";
+        String status = "Status samochodu: \n";
+        if (!isEngineOk)
+            status += " > Silnik uszkodzony\n";
+        if (fuelLevel == 0)
+            status += " > Brak paliwa\n";
+        if (fuelFlapOpen)
+            status += " > Zamknij wlew paliwa\n";
+        if (doorsOpen)
+            status += " > Drzwi lub bagażnik są otwarte\n";
+        if (engineOn)
+            status += " > Silnik włączony";
+        else
+            status += " > Silnik wyłączony";
+        return status;
     }
 
     @Override

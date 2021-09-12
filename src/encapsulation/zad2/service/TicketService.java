@@ -10,8 +10,9 @@ import java.util.Optional;
 public class TicketService {
 
     public Optional<Ticket> createTicket(Screening screening, Client client) {
-        if (screening.hasFreeSeats()) {
-            throw new IllegalArgumentException("No seats available for the screening");
+        if (!screening.hasFreeSeats()) {
+            System.out.println(("No seats available for the screening"));
+            return Optional.empty();
         } else if (isClientPermitted(client, screening)) {
             return Optional.empty();
         } else {
