@@ -1,0 +1,12 @@
+Stwórz projekt, w którym wykorzystując dziedziczenie stworzysz prostą hierarchię klas odwzorowujących
+części w hurtowni motoryzacyjnej zgodnie z poniższą specyfikacją:
+
+    Każda część w hurtowni (Part) posiada swój unikalny numer identyfikacyjny,
+    przechowuje nazwę producenta, model i serię produktu
+    Opony (Tire) posiadają dodatkowo informację o rozmiarze i szerokości
+    Części układu wydechowego (ExhaustPart) posiadają dodatkową informację, czy jest ona zgodna z
+    europejskim standardem emisji spalin
+
+Dopisz krótką klasę testową, w której utworzysz kilka obiektów reprezentujących części i wyświetl informacje o nich.
+
+Początkowo klasy mogą mieć pola publiczne, później dostosuj je do konwencji JavaBeans.

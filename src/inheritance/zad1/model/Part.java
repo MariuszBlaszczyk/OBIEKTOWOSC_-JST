@@ -16,21 +16,6 @@ public class Part {
         this.series = series;
     }
 
-    public int getIdNumber() {
-        return idNumber;
-    }
-
-    public String getNameOfManufacturer() {
-        return nameOfManufacturer;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public String getSeries() {
-        return series;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -47,9 +32,9 @@ public class Part {
 
     @Override
     public String toString() {
-        return "- id: " + getIdNumber() + "\n" +
-                "- name of manufacturer: " + getNameOfManufacturer() + "\n" +
-                "- model: " + getModel() + "\n" +
-                "- series: " + getSeries() + "\n";
+        return "- id: " + idNumber + "\n" +
+                "- name of manufacturer: " + nameOfManufacturer + "\n" +
+                "- model: " + model + "\n" +
+                "- series: " + series + "\n";
     }
 }
