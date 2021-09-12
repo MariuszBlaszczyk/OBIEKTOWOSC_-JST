@@ -1,6 +1,7 @@
 package inheritance.zad2.model;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class Course {
 
@@ -16,5 +17,23 @@ public class Course {
         this.description = description;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Course course = (Course) o;
+        return Objects.equals(id, course.id) && Objects.equals(name, course.name) && Objects.equals(price, course.price) && Objects.equals(description, course.description);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, price, description);
+    }
+
+    @Override
+    public String toString() {
+        return "- id: " + id + "\n" +
+                "- name: " + name + "\n" +
+                "- price: " + price + " zł\n" +
+                "- description: " + description;}
 }
