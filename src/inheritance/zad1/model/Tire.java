@@ -1,4 +1,4 @@
-package inheritance.model;
+package inheritance.zad1.model;
 
 import java.util.Objects;
 

@@ -1,7 +1,7 @@
-package inheritance.main;
+package inheritance.zad1.main;
 
-import inheritance.model.ExhaustPart;
-import inheritance.model.Tire;
+import inheritance.zad1.model.ExhaustPart;
+import inheritance.zad1.model.Tire;
 
 public class App {
 
