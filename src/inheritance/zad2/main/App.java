@@ -19,7 +19,7 @@ public class App {
         System.out.println(online);
 
         Bootcamp bootcamp = new Bootcamp("JAVA-BOOT-456", "JAVA'B", new BigDecimal(20000),
-                "Learn with us", true, "Dominik Mazur", 100);
+                "Learn with us",  "Dominik Mazur", 100);
         System.out.println(bootcamp);
     }
 }
