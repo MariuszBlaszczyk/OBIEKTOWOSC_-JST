@@ -1,0 +1,15 @@
+Napisz program, w którym stworzysz prostą hierarchię klas reprezentujących owoce w sklepie.
+Powinny istnieć co najmniej dwie klasy:
+
+    Fruit (klasa nadrzędna), która pozwala przechowywać wagę (w gramach) oraz typ owocu
+    (np. egzotyczny, jagodowy, jabłkowaty). Klasa powinna posiadać konstruktor pozwalający ustawić
+    oba pola oraz metodę getInfo(), która zwraca informację o owocu w postaci Stringa.
+
+    Apple (klasa reprezentująca jabłko, dziedzicząca po klasie Fruit).
+    Posiada pole przechowujące informację o odmianie. W klasie zdefiniuj konstruktor,
+    który pozwoli ustawić wagę i odmianę jabłka. Typ owocu powinien być zawsze ustawiany na "jabłkowaty".
+    Nadpisz metodę getInfo(), która zwróci napis zawierający informacje o typie owocu, wadze i odmianie jabłka.
+
+Zarówno w konstruktorze jak i metodzie getInfo() wykorzystaj słowo super.
+
+W klasie GroceryShop (sklep spożywczy) utwórz obiekt klasy Apple i wyświetl informacje pobrane przy pomocy metody getInfo().
