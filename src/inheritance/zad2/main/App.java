@@ -18,8 +18,10 @@ public class App {
                 "Learn at home", 168, 680);
         System.out.println(online);
 
-        Bootcamp bootcamp = new Bootcamp("JAVA-BOOT-456", "JAVA'B", new BigDecimal(20000),
-                "Learn with us",  "Dominik Mazur", 100);
+        Bootcamp bootcamp = new Bootcamp("JAVA-ONLINE-BOOT-456", "JAVA'B", new BigDecimal("20000"),
+                "Learn with us", 500, 1000,
+                "Dominik Mazur", 100);
         System.out.println(bootcamp);
+
     }
 }

@@ -2,12 +2,12 @@ package inheritance.zad3.model;
 
 import java.util.Objects;
 
-public class Apple extends  Fruit{
+public class Apple extends Fruit {
 
     private AppleVariety appleVariety;
 
-    public Apple(int weightInGrams, TypeOfFruit typeOfFruit, AppleVariety appleVariety) {
-        super(weightInGrams, typeOfFruit);
+    public Apple(int weightInGrams, String typeOfFruit, AppleVariety appleVariety) {
+        super(weightInGrams, "jabłkowaty");
         this.appleVariety = appleVariety;
     }
 

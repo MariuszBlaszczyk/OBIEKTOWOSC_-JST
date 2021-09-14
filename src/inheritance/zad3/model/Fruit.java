@@ -5,13 +5,12 @@ import java.util.Objects;
 public class Fruit {
 
     private int weightInGrams;
-    TypeOfFruit typeOfFruit;
+    private String typeOfFruit;
 
-    public Fruit(int weightInGrams, TypeOfFruit typeOfFruit) {
+    public Fruit(int weightInGrams, String typeOfFruit) {
         this.weightInGrams = weightInGrams;
         this.typeOfFruit = typeOfFruit;
     }
-
 
     @Override
     public boolean equals(Object o) {
