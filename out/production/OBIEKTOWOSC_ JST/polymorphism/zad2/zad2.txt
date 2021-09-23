@@ -1,0 +1,39 @@
+Tworzymy grę, w której istnieją różne klasy postaci. Każda postać ma swoją nazwę, siłę ataku, moc obrony i energię
+(ilość życia). Dodatkowo postaci dzielą się na dwa typy:
+
+    atakujących - posiadają dodatkowe pole, które określa procentowy bonus do ataku
+    (przykładowo jeżeli postać ma siłę ataku 100, a bonus do ataku wynosi 0.2, to całkowita siła ataku wynosi 120),
+    obrońców - posiadają dodatkowe pole, które określa procentowy bonus do obrony
+    (przykładowo jeżeli postać ma moc obrony 100, a bonus do obrony wynosi 0.2, to całkowita moc obrony wynosi 120).
+
+W grze tworzymy drużyny, przy czym każda drużyna ma swoją nazwę i składa się dokładnie z trzech postaci
+(każda z nich może być atakującym lub obrońcą).
+
+Algorytm wyboru zwycięzcy bitwy jest następujący:
+
+    - najpierw atakuje drużyna pierwsza. Atak obniża energię drużyny drugiej o tyle,
+    ile wynosi różnica siły ataku drużyny pierwszej i mocy obrony drużyny drugiej.
+    Jeżeli moc obrony drużyny drugiej jest większa od siły ataku drużyny pierwszej,
+    to energia drużyny drugiej pozostaje bez zmian.
+    - następnie atakuje drużyna druga. Atak obniża energię drużyny pierwszej o tyle,
+    ile wynosi różnica siły ataku drużyny drugiej i mocy obrony drużyny pierwszej.
+    Jeżeli moc obrony drużyny pierwszej jest większa od siły ataku drużyny drugiej,
+    to energia drużyny pierwszej pozostaje bez zmian.
+
+Wygrywa ta drużyna, która w wyniku będzie miała więcej energii życia.
+Jeżeli obie drużyny po pojedynku mają tyle samo energii, to wynikiem jest remis.
+
+Stwórz dwie przykładowe drużyny, zrób symulację bitwy i wyświetl jej wynik.
+
+Przykład:
+
+    Drużyna 1 ma energię życia 100, sumę siły ataku 200 i moc obrony 50,
+    Drużyna 2 ma energię życia 150, sumę siły ataku 150 i moc obrony 100.
+
+Drużyna 1 atakuje pierwsza, więc obliczamy różnicę siły ataku drużyny 1 i mocy obrony drużyny 2,
+otrzymując 200 - 100 = 100. Tyle też odejmujemy z energii życia drużyny 2, co daje 150 - 100 = 50.
+
+Drużyna 2 atakuje jako druga, więc obliczamy różnicę siły ataku drużyny 2 i mocy obrony drużyny 1,
+otrzymując 150 - 50 = 100. Tyle też odejmujemy z energii życia drużyny 1, co daje 100 - 100 = 0.
+
+Drużynie 2 pozostało 50 punktów życia, a drużynie 1 zostało ich 0. Drużyna 2 wygrywa.

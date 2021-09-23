@@ -6,7 +6,7 @@ public class Apple extends Fruit {
 
     private AppleVariety appleVariety;
 
-    public Apple(int weightInGrams, String typeOfFruit, AppleVariety appleVariety) {
+    public Apple(int weightInGrams, AppleVariety appleVariety) {
         super(weightInGrams, "jabłkowaty");
         this.appleVariety = appleVariety;
     }

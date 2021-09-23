@@ -1,0 +1,6 @@
+Wczytaj od użytkownika dowolny napis. Jeżeli napis ten rozpoczyna się wielką literą,
+to zamień cały tekst na wielkie litery, a jeżeli rozpoczyna się małą literą, to zamień go na małe litery.
+Zamieniony tekst wyświetl następnie w konsoli.
+
+Jeżeli wprowadzony przez użytkownika tekst nie rozpoczyna się od wielkiej, ani małej litery,
+tylko od cyfry lub innego znaku, to wyświetl oryginalny tekst.

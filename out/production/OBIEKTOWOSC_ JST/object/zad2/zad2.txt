@@ -1,0 +1,12 @@
+Aplikacja składa się z czterech klas:
+
+    konto bankowe (BankAccount),
+    klienta banku (Client),
+    adres klienta (Address),
+    klasę testową (BankTest).
+
+Pomimo, że w klasie BankAccount zdefiniowana jest metoda equals(), to przy porównywaniu dwóch identycznych
+kont bankowych, należących do takich samych klientów, z takimi samymi adresami, wynikiem jest false.
+Popraw kod w taki sposób, aby przy porównywaniu identycznych kont bankowych, należących do takich samych klientów
+z takimi samymi adresami, wynikiem porównania była wartość true. Jeżeli co najmniej jedno pole w koncie bankowym,
+danych klienta lub adresu będą różne, to porównanie powinno zwracać false.

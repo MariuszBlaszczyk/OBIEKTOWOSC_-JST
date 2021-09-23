@@ -1,0 +1,27 @@
+Tworzymy system do składania zamówień w pewnym sklepie internetowym. Zamówienie (Order) przechowuje informację
+o zamówionym produkcie (wystarczy nam jego nazwa), cenie zamówienia oraz status zamówienia. Możliwe statusy zamówienia to:
+
+    NEW - złożono zamówienie, ale jeszcze go nie opłacono,
+    PAID - zamówienie opłacone,
+    SHIPPED - zamówienie wysłane,
+    DELIVERED - zamówienie dostarczone,
+    CANCELLED - zamówienie anulowano.
+
+Zdefiniuj metodę, która przyjmuje dwa parametry: tablicę z zamówieniami i status,
+a zwraca tablicę z zamówieniami, które mają status taki jak przekazany argument (np. wszystkie opłacone zamówienia).
+
+Stwórz tablicę, w której będzie kilka obiektów reprezentujących różne zamówienia,
+z różnymi statusami, wczytaj od użytkownika nazwę statusu. Korzystając z wcześniej zdefiniowanej metody,
+przefiltruj te zamówienia, które mają status podany przez użytkownika i wyświetl je na ekranie.
+
+Informacje o zamówieniu powinny być wyświetlane w następującej formie:
+
+Nazwa towaru (cena zł) - Status
+
+przy czym status powinien być wyświetlony w czytelnej wersji w języku polskim, np.
+
+Komputer Apple MacBook Pro 2018 (4999zł) - Dostarczone
+
+
+Postaraj się napisać program w taki sposób, aby całość kodu nie była zapisana w metodzie main(),
+tylko żeby był on podzielony pomiędzy kilka różnych metod.
